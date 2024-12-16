@@ -35,7 +35,6 @@ void solve() {
         cnl; // New line after each pass
     }
 }
-
 int main() {
     fast_io;
     solve();
