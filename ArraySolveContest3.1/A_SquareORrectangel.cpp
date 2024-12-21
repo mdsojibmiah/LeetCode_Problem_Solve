@@ -10,7 +10,7 @@ using namespace std;
 
 #define ll long long
 #define ld long double
-#define nl '\n';
+#define nl '\n'
 #define pb push_back
 #define all(v) v.begin(), v.end()
 #define F first
