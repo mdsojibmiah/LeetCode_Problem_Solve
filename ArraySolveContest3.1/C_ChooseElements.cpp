@@ -1,14 +1,15 @@
 /* Author: Error_404_Coder
    Email: mdsojibmiah.coder@gmail.com
    Date  : 12 / 22 / 2024
-   Time  : 01:13
-   Problem Link: https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/C
+   Time  : 01:18
+   Problem Link: 
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 #define ll long long
+#define nl '\n'
 #define ld long double
 #define pb push_back
 #define all(v) v.begin(), v.end()
