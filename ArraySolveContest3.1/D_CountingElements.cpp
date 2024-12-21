@@ -22,16 +22,24 @@ const ld PI = acos(-1.0);
 
 #define fast_io ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-void solve() {
-    // Your code here
+void solve(int n) {
+    vector<int> v(n);
+    for(int i=0;i<n;i++) cin>>v[i];
+    int count=0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(v[i]+1==v[j]) {
+                count++;
+                break;
+            }
+        }
+    }
+    cout<<count<<nl;
 }
 
 int main() {
     fast_io;
-    int t = 1;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
+    int n;cin>>n;
+    solve(n);
     return 0;
 }
