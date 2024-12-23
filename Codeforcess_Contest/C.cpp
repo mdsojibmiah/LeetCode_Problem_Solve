@@ -14,38 +14,31 @@ void solve() {
     int n, m, k;
     cin >> n >> m >> k;
 
-    vector<int> a(m);
+    vector<int> a(m), q(k);
     unordered_set<int> s;
 
-    for (int i = 0; i < m; ++i) {
-        cin >> a[i];
-    }
+    for (int i = 0; i < m; ++i) cin >> a[i];
+    for (int i = 0; i < k; ++i) cin >> q[i], s.insert(q[i]);
 
-    for (int i = 0; i < k; ++i) {
-        int q;
-        cin >> q;
-        s.insert(q);
-    }
-
-    string result = "";
+    string r = "";
     for (int i = 0; i < m; ++i) {
-        if ((int)s.size() >= n - 1 && s.find(a[i]) == s.end()) {
-            result += '1';
-        } else {
-            result += '0';
+        bool p = true;
+        for (int j = 1; j <= n; ++j) {
+            if (j != a[i] && s.find(j) == s.end()) {
+                p = false;
+                break;
+            }
         }
+        r += p ? '1' : '0';
     }
 
-    cout << result << '\n';
+    cout << r << '\n';
 }
 
 int main() {
     fast_io;
     int t;
     cin >> t;
-
-    while (t--) {
-        solve();
-    }
+    while (t--) solve();
     return 0;
 }
