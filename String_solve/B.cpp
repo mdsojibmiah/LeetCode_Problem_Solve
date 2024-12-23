@@ -23,15 +23,14 @@ const ld PI = acos(-1.0);
 #define fast_io ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 void solve() {
-    // Your code here
+    string s;
+    getline(cin,s);
+    size_t pos = s.find('\\');
+    cout << s.substr(0,pos) << nl;
 }
 
 int main() {
     fast_io;
-    int t = 1;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
+    solve();
     return 0;
 }
