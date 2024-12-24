@@ -26,18 +26,16 @@ ll fact(int n){
         res *= i;
     }
     return res;
-    
 }
 void solve() {
     int n, d;
     cin >> n >> d;
-    ll nfact = fact(n);
     for (int odd=1; odd<=9; odd+=2){
         if (n == 7) {
             cout << "1 3 7 9";
             break;
         }
-        if ((d * nfact) % odd == 0){
+        if ((d * fact(n)) % odd == 0){
                 cout << odd << " ";
         }
     }

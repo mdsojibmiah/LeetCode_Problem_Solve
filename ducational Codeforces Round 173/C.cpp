@@ -14,8 +14,20 @@ void solve() {
         return;
     }
 
+    // Check divisibility progressively without computing full factorial
     for (int odd = 1; odd <= 9; odd += 2) {
-        if ((d * n) % odd == 0) {
+        ll temp = d;
+        bool divisible = true;
+        
+        for (int i = 2; i <= n; i++) {
+            temp *= i;
+            if (temp % odd != 0) {
+                divisible = false;
+                break;
+            }
+        }
+
+        if (divisible) {
             cout << odd << " ";
         }
     }
