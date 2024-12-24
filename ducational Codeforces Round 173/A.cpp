@@ -27,8 +27,7 @@ ll solve(ll n) {
         n/= 4;
         a++;
     }
-    return 1LL << a;
-    
+    return 1LL << a;   
 }
 
 int main() {

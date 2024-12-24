@@ -1,37 +1,33 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int t;
-    cin >> t;
+#define ll long long
+#define nl '\n'
+#define fast_io ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-    while (t--) {
-        int n, d;
-        cin >> n >> d;
+void solve() {
+    int n, d;
+    cin >> n >> d;
 
-        // For n >= 7, the answer is all odd digits
-        if (n >= 7) {
-            cout << "1 3 5 7 9" << endl;
-            continue;
-        }
-
-        // Compute n!
-        long long factorial = 1;
-        for (int i = 1; i <= n; i++) {
-            factorial *= i;
-        }
-
-        // Check divisibility for each odd digit
-        bool first = true;
-        for (int odd = 1; odd <= 9; odd += 2) {
-            if ((d * factorial) % odd == 0) {
-                if (!first) cout << " ";
-                cout << odd;
-                first = false;
-            }
-        }
-        cout << endl;
+    if (n == 7) {
+        cout << "1 3 7 9";
+        return;
     }
 
+    for (int odd = 1; odd <= 9; odd += 2) {
+        if ((d * n) % odd == 0) {
+            cout << odd << " ";
+        }
+    }
+}
+
+int main() {
+    fast_io;
+    int t;
+    cin >> t;
+    while (t--) {
+        solve(); 
+        cout << nl;
+    }
     return 0;
 }
