@@ -32,8 +32,6 @@ int main() {
     for (char &c : S) {
         c = (c == ',') ? ' ' : (islower(c) ? toupper(c) : (isupper(c) ? tolower(c) : c));
     }
-
     cout << S << nl;
-
     return 0;
 }
