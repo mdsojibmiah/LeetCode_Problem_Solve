@@ -26,10 +26,13 @@ void solve() {
 
 int main() {
     fast_io;
-    int t
-    cin >> t;
-    while (t--) {
-        solve();
+    string S;
+    cin >> S;
+    int sum = 0;
+    for (char ch:S){
+        sum += (ch - '0');
     }
+    cout << sum << nl;
+
     return 0;
 }
