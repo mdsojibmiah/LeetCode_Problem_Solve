@@ -28,12 +28,9 @@ int main() {
     fast_io;
     string A, B;
     cin >> A >> B;
-    int Alen = A.size();
-    int Blen = B.size();
-    cout << Alen << " " << Blen << nl;
+    cout << A.size() << " " << B.size() << nl;
     cout << A << B << nl;
     swap(A[0],B[0]);
     cout << A << " " << B << nl;
-
     return 0;
 }
