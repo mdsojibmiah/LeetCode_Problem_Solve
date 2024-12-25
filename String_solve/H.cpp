@@ -14,14 +14,20 @@ using namespace std;
 #define pb push_back
 #define all(v) v.begin(), v.end()
 
-const ll INF = 1e18;
-const ll MOD = 1e9 + 7;
-const ld PI = acos(-1.0);
+// const ll INF = 1e18;
+// const ll MOD = 1e9 + 7;
+// const ld PI = acos(-1.0);
 
 #define fast_io ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 void solve() {
-    // Your code here
+    string s;
+    cin >> s;
+    if(s.find("010")!=string::npos ||s.find("101")!=string::npos){
+        cout << "Good" << nl;
+    }else {
+        cout << "Bad" << nl;
+    }
 }
 
 int main() {
