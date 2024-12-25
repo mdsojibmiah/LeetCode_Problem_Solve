@@ -21,11 +21,6 @@ const ld PI = acos(-1.0);
 #define fast_io ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 void solve() {
-    // Your code here
-}
-
-int main() {
-    fast_io;
     string S;
     getline(cin, S);
     
@@ -33,5 +28,10 @@ int main() {
         c = (c == ',') ? ' ' : (islower(c) ? toupper(c) : (isupper(c) ? tolower(c) : c));
     }
     cout << S << nl;
+}
+
+int main() {
+    fast_io;
+    solve();
     return 0;
 }
