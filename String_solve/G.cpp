@@ -26,10 +26,14 @@ void solve() {
 
 int main() {
     fast_io;
-    int t
-    cin >> t;
-    while (t--) {
-        solve();
+    string S;
+    getline(cin, S);
+    
+    for (char &c : S) {
+        c = (c == ',') ? ' ' : (islower(c) ? toupper(c) : (isupper(c) ? tolower(c) : c));
     }
+
+    cout << S << nl;
+
     return 0;
 }
