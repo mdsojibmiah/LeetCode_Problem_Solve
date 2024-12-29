@@ -35,7 +35,7 @@ void solve() {
 
     while (j < t.size()) r += t[j++];
 
-    cout << r << endl;
+    cout << r << nl;
 }
 
 int main() {
