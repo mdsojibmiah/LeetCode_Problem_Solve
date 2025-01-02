@@ -30,7 +30,7 @@ void solve() {
         pos += 1;
     }
     
-    cout << S << endl;
+    cout << S << nl;
 }
 
 int main() {
