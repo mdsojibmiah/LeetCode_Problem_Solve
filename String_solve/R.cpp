@@ -21,15 +21,26 @@ const ld PI = acos(-1.0);
 #define fast_io ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
 void solve() {
-    // Your code here
+    int n;
+    string s;
+    cin >> n >> s;
+
+    int sc = 0;
+    for (int i = 0; i < n; ++i) {
+        if (s[i] == 'V') sc += 5;
+        else if (s[i] == 'W') sc += 2;
+        else if (s[i] == 'X' && i + 1 < n) ++i;
+        else if (s[i] == 'Y' && i + 1 < n) s += s[i + 1], ++i;
+        else if (s[i] == 'Z' && i + 1 < n) {
+            if (s[i + 1] == 'V') sc /= 5, ++i;
+            else if (s[i + 1] == 'W') sc /= 2, ++i;
+        }
+    }
+    cout << sc << endl;
 }
 
 int main() {
     fast_io;
-    int t;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
+    solve();
     return 0;
 }
